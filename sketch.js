@@ -5,6 +5,9 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
+var b1,b2,b3;
+var bb1,bb2,bb3;
+
 function preload()
 {
 	helicopterIMG=loadImage("helicopter.png")
@@ -40,8 +43,24 @@ function setup() {
  	World.add(world, ground);
 
 
+	 bb1 = createSprite(320,620,10,80);
+	 b1 = Bodies.rectangle({isStatic:true},350,610,);
+	 World.add(world,b1);
+	 bb1.shapeColor= "red";
+
+	 bb2 = createSprite(370,655,100,10);
+	 b2 = Bodies.rectangle({isStatic:true},370,610,);
+	 World.add(world,b1);
+	 bb2.shapeColor= "red";
+	 
+	 bb3 = createSprite(420,620,10,80);
+	 b3 = Bodies.rectangle({isStatic:true},420,610,);
+	 World.add(world,b1);
+	 bb3.shapeColor= "red";
+
 	Engine.run(engine);
   
+
 }
 
 
